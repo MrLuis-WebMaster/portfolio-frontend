@@ -11,17 +11,17 @@ async function getData() {
 }
 
 export const metadata = {
-    title: 'Home'
+    title: 'Home - Mr. Luis'
 }
 export default async function Home(): Promise<JSX.Element> {
-    const { data: { attributes: { titleStart, shortDescriptionHome, email, cv } } } = await getData();
+    const { data: { attributes: { titleStart, shortDescriptionHome, email, cv, imageHome } } } = await getData();
     return (
         <>
             <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start">
                 <Layout className="pt-0 md:pt-16 sm:pt-16">
                     <div className="flex items-center justify-between w-full lg:flex-col">
                         <div className="w-1/2 md:w-full">
-                            <Image src={ImageHome} width={2000} height={2000} alt='Home' />
+                            <Image src={(process.env.NEXT_PUBLIC_STRAPI_API_URL + imageHome.data.attributes.url ) || ImageHome} width={2000} height={2000} alt='Home' />
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
                             <AnimatedText
@@ -35,7 +35,7 @@ export default async function Home(): Promise<JSX.Element> {
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
-                                    href={process.env.NEXT_PUBLIC_STRAPI_API_URL + cv.data[0].attributes.url}
+                                    href={process.env.NEXT_PUBLIC_STRAPI_API_URL + cv.data[0].attributes.url || ''}
                                     target="_blank"
                                     className="flex items-center text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark

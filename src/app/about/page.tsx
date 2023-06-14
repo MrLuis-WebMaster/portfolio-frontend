@@ -4,8 +4,8 @@ import Experience from "@/components/About/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/About/Skills";
 import Image from "next/image";
-
 import { fetchAPI } from "@/lib/api";
+
 async function getDataBiography() {
   const response = await fetchAPI('/cv?populate=*')
   return response;
@@ -26,6 +26,11 @@ async function getDataEducation() {
   const response = await fetchAPI('/educations')
   return response;
 }
+
+export const metadata = {
+  title: 'About - Mr. Luis'
+}
+
 const about = async (): Promise<JSX.Element> => {
   const { data: { attributes: { biography, image } } } = await getDataBiography();
   const { data: skills } = await getDataSkills();

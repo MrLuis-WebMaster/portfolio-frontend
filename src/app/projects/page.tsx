@@ -8,9 +8,15 @@ async function getDataProjects() {
   const response = await fetchAPI('/projects?populate=*')
   return response;
 }
+
+
+export const metadata = {
+  title: 'Projects - Mr. Luis'
+}
+
+
 const projects = async () => {
   const { data: projects } = await getDataProjects();
-  console.log(projects)
   return (
     <>
       <main className="w-full mab-16 flex flex-col items-center justify-center dark:text-light">
