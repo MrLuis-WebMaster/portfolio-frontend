@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['127.0.0.1'],
+        domains: [process.env.DOMAIN_IMAGE || '127.0.0.1'],
     },
 }
 
