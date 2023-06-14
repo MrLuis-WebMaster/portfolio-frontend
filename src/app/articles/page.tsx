@@ -111,12 +111,6 @@ const articles = () => {
     <>
       <Head>
         <title>Blog | Articles</title>
-        <meta
-          name="description"
-          content="Browse through CodeBucks's collection of software engineering articles and 
-        tutorials on Next.js, React.js, web development, and more. 
-        Gain valuable insights and stay up-to-date with SEO tips for building a developer portfolio."
-        />
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
