@@ -27,7 +27,8 @@ const Details = ({ type, time, place, info }: DetailsProps) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {place}
         </span>
-        <p className="font-medium w-full md:text-sm">{info}</p>
+        <p className="font-medium w-full md:text-sm" dangerouslySetInnerHTML={{ __html: info }}/>
+
       </motion.div>
     </li>
   );

@@ -50,9 +50,7 @@ const about = async (): Promise<JSX.Element> => {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biography
               </h2>
-              <p className="font-medium">
-                {biography}
-              </p>
+              <p className="font-medium" dangerouslySetInnerHTML={{ __html: biography }} />
             </div>
 
             <div className="col-span-4 lg:col-span-8 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light md:order-1">

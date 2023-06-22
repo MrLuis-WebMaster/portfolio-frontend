@@ -68,9 +68,7 @@ const FeaturedProject = ({
                         {title}
                     </h2>
                 </Link>
-                <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
-                    {summary}
-                </p>
+                <p className="my-2 font-medium text-dark dark:text-light sm:text-sm" dangerouslySetInnerHTML={{ __html: summary }} />
                 <div className="mt-2 flex items-center">
                     <Link
                         href={link}
