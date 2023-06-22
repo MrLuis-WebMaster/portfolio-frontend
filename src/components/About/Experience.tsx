@@ -31,7 +31,7 @@ const Details = ({ position, company, time, work }: DetailsProps) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="font-medium w-full md:text-sm" dangerouslySetInnerHTML={{ __html: work }}/>
       </motion.div>
     </li>
   );
