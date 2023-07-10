@@ -25,13 +25,13 @@ const Links = async (): Promise<JSX.Element> => {
 
   return (
     <div className='my-12 flex flex-col items-center gap-2.5 text-slate-300'>
-      <div className='w-44 h-44 rounded-full'>
+      <div className='w-44 h-44 rounded-full flex items-center justify-center mb-2'>
         <Image
           src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.data.attributes.url}
           width={450}
           height={450}
           alt={name}
-          className="w-full rounded-full"
+          className="w-full h-100 object-cover rounded-full"
           priority
         />
       </div>
