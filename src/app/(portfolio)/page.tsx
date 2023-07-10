@@ -3,7 +3,7 @@ import { LinkArrow } from '@/components/Home/Icons';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import Link from 'next/link';
-import ImageHome from '../../public/images/home.png'
+import ImageHome from '../../../public/images/home.png'
 import { fetchAPI } from "@/lib/api";
 async function getData() {
     const response = await fetchAPI('/cv?populate=*')
