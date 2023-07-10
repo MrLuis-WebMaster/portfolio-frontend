@@ -31,7 +31,7 @@ const Links = async (): Promise<JSX.Element> => {
           width={450}
           height={450}
           alt={name}
-          className="w-full h-100 object-cover rounded-full"
+          className="w-full h-full object-cover rounded-full"
           priority
         />
       </div>
