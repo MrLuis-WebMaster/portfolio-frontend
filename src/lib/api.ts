@@ -14,6 +14,7 @@ export async function fetchAPI(
     headers: {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
     },
+    cache: 'no-store' ,
     ...options,
   };
 
