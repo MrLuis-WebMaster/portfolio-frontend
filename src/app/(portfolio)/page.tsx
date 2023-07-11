@@ -22,7 +22,7 @@ export default async function Home(): Promise<JSX.Element> {
               <div className="w-1/2 md:w-full">
                 {imageHome ? (
                   <Image
-                    src={process.env.NEXT_PUBLIC_STRAPI_API_URL + imageHome.data.attributes.url}
+                    src={process.env.NEXT_PUBLIC_STRAPI_API_URL + imageHome?.data?.attributes?.url}
                     width={2000}
                     height={2000}
                     alt="Home"
@@ -43,7 +43,7 @@ export default async function Home(): Promise<JSX.Element> {
                 <div className="flex items-center self-start mt-2 lg:self-center">
                   {cv ? (
                     <Link
-                      href={process.env.NEXT_PUBLIC_STRAPI_API_URL + cv.data[0].attributes.url}
+                      href={process.env.NEXT_PUBLIC_STRAPI_API_URL + cv?.data[0]?.attributes?.url}
                       target="_blank"
                       className="flex items-center text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
