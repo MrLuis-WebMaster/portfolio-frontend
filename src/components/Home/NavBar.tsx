@@ -10,8 +10,8 @@ import { fetchAPI } from "@/lib/api";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({
-    linkedin: undefined,
-    github: undefined
+    linkedin: null,
+    github: null
   });
 
   const handleClick = () => {
@@ -36,7 +36,9 @@ const NavBar = () => {
     getData();
   }, [fetchData]);
 
-  console.log(data)
+  if (!data) {
+    return null;
+  }
 
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
